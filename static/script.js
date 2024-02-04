@@ -253,6 +253,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         { channelName: "Like Nastya ESP", subscribers: 39500000 },
         { channelName: "Total Gaming", subscribers: 39300000 },
         { channelName: "Maria Clara & JP", subscribers: 39300000 },
+        { channelName: "Mark Rober", subscribers: 29800000 },
+        { channelName: "Safety Third", subscribers: 256000},
+        { channelName: "William Osman", subscribers: 2980000 },
+        { channelName: "TheBackyardScientist", subscribers: 5850000 },
+        { channelName: "Allen Pan", subscribers: 2140000 },
+        { channelName: "NileRed", subscribers: 5900000 },
+        { channelName: "Michael Reeves", subscribers: 7140000 },
     ];
 
     function generateVideoTitle() {
