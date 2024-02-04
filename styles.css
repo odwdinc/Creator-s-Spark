@@ -195,5 +195,39 @@ body, button, canvas, div {
   border-radius: 20px; /* Rounded corners */
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    position: absolute; /* Consider toggling visibility instead of always showing */
+    z-index: 20; /* Ensure it's above other content */
+  }
 
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .content-header h1, .form-container h1 {
+    font-size: 20px; /* Smaller font size for headers */
+  }
+
+  .create-button, .form-container .btn {
+    padding: 12px 15px; /* Adjust button sizes for easier interaction */
+  }
+
+  .form-container textarea {
+    min-height: 150px; /* Adjust textarea height */
+  }
+
+  .video-item, .thumbnail img {
+    flex-direction: column; /* Stack thumbnail and description vertically */
+  }
+
+  .thumbnail img {
+    width: 100%; /* Full width thumbnails */
+    margin-right: 0; /* Remove margin if stacking vertically */
+  }
+}
 /* Additional responsive and detailed styles would be needed for a complete implementation */
