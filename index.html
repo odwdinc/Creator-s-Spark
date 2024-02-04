@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator's Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="fireworksCanvas"></canvas> <!-- Canvas for fireworks -->
+  <div class="sidebar">
+    <!-- Sidebar content -->
+    <div class="profile">
+      <div id="profile-placeholder" alt="Profile"></div>
+      <h3>Your Channel</h3>
+      <div id="subscriberCount">Subscribers: 0</div>
+      <div id="watchTime">Total Watch Time: 0 hours</div>
+      <div id="Boost"></div>
+      <div  class="container" id="milestoneRewards"></div>
+    </div>
+    <div class="leaderboard-container">
+      <h2>The Top 100 Leaderboard</h2>
+      <table id="leaderboard">
+          <thead>
+              <tr>
+                  <th>Rank</th>
+                  <th>Channel</th>
+                  <th>Subscribers</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Leaderboard entries will be dynamically inserted here -->
+          </tbody>
+      </table>
+    </div>
+    <div class="settings">
+      <p>Settings</p>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="content-header">
+      <h1>Channel Content</h1>
+      <button id="createButton" class="create-button">CREATE</button>
+      <!-- <button id="openButton" class="open-button">Chat</button> -->
+    </div>
+    <div id="video_list" class="video-list">
+      <!-- Videos entries will be dynamically inserted here -->
+      <div>Welcome to the <b>Creator's Dashboard</b>! Currently, your channel awaits its debut with an empty video library.</div>
+      <div>Feeling creative? Press the <b>"CREATE"</b> button to launch your first video into the digital universe!</div>
+      <div>Dive into a world where each click not only unfolds new opportunities but also sets off dazzling fireworks, celebrating your every interaction.</div>
+      <div>In this realm, success is only ever ascending. Subscribers, Watch Time, and Views perpetually climb, rewarding your every move with visible growth.</div>
+      <div>Unlock the power of collaboration to turbocharge your <b>Channel Booster</b>. This surge amplifies your channel's visibility, bringing an avalanche of Subscribers for videos published in this magical period.</div>
+
+    </div>
+  </div>
+  <div class="chat-popup" id="myChatPopup">
+    <form action="/" class="form-container">
+        <h1 id="chat_from">Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea id="chat_msg" placeholder="Type message.." name="msg" disabled></textarea>
+
+        <button id="AcceptForm" type="button" class="btn accept">Accept Collaboration</button>
+        <button id="closeForm" type="button" class="btn cancel">Close</button>
+    </form>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
