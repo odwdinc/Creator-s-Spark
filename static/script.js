@@ -593,7 +593,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function openForm(From, msg) {
         document.getElementById("myChatPopup").style.display = "block";
         document.getElementById("chat_msg").placeholder=msg;
-        document.getElementById("chat_from").innerText = `New Msg: ${From}`
+        document.getElementById("chat_from").innerText = `From: ${From}`
         document.getElementById("AcceptForm").disabled = true;
         timeoutId = setTimeout(() => {
           document.getElementById("AcceptForm").disabled = false;
@@ -622,9 +622,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Attach events
     document.getElementById('createButton').addEventListener('click', createVideo);
-    window.addEventListener('click', (e) => {
-        createFirework(e.clientX, e.clientY);
-    });
+    // window.addEventListener('click', (e) => {
+    //     createFirework(e.clientX, e.clientY);
+    // });
+
+    // Function to handle the event
+    function handleEvent(e) {
+        var x, y;
+        // For touch events
+        if (e.touches) {
+            x = e.touches[0].clientX;
+            y = e.touches[0].clientY;
+        } else { // For mouse events
+            x = e.clientX;
+            y = e.clientY;
+        }
+        createFirework(x, y);
+    }
+
+    // Adding event listeners for both click and touch events
+    window.addEventListener('click', handleEvent);
+
+    // Adding touchstart as an example, you might want to add touchend or touchmove depending on your needs
+    window.addEventListener('touchstart', handleEvent);
+
+
 
     // document.getElementById('openButton').addEventListener('click', chatTest);
     document.getElementById('AcceptForm').addEventListener('click', AcceptForm);

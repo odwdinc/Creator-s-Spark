@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Creator's Dashboard</title>
 <link rel="stylesheet" href="static/styles.css">
 </head>
@@ -59,7 +59,7 @@
         <h1 id="chat_from">Chat</h1>
 
         <label for="msg"><b>Message</b></label>
-        <textarea id="chat_msg" placeholder="Type message.." name="msg" disabled></textarea>
+        <textarea id="chat_msg" placeholder="Type message.." name="msg" readonly="readonly"></textarea>
 
         <button id="AcceptForm" type="button" class="btn accept">Accept Collaboration</button>
         <button id="closeForm" type="button" class="btn cancel">Close</button>
